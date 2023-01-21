@@ -2,10 +2,11 @@
 // Created by aleksei on 1/21/23.
 //
 #ifdef MY_COMPILATION
+
 #include "main.h"
+
 #endif
 
-#include <optional>
 
 std::istream &operator>>(std::istream &iss, Data &data) {
     NumType current;
@@ -20,7 +21,7 @@ std::istream &operator>>(std::istream &iss, Data &data) {
 }
 
 NumType Solve(const Data &data) {
-    std::optional<size_t> first_max, second_max;
+    NumType first_max, second_max;
     for (size_t i = 0; i < data.numbers.size(); ++i) {
         NumType v = data.numbers[i];
         if (i == 0) {
@@ -29,19 +30,19 @@ NumType Solve(const Data &data) {
         }
         if (i == 1) {
             second_max = i;
-            if (data.numbers[first_max.value()] < data.numbers[second_max.value()]) {
+            if (data.numbers[first_max] < data.numbers[second_max]) {
                 std::swap(first_max, second_max);
             }
             continue;
         }
-        if (v > data.numbers[first_max.value()]) {
+        if (v > data.numbers[first_max]) {
             second_max = first_max;
             first_max = i;
-        } else if (i != first_max.value() && v > data.numbers[second_max.value()]) {
+        } else if (i != first_max && v > data.numbers[second_max]) {
             second_max = i;
         }
     }
-    return data.numbers[first_max.value()] * data.numbers[second_max.value()];
+    return data.numbers[first_max] * data.numbers[second_max];
 }
 
 void PrintAnswer(const NumType result) {
