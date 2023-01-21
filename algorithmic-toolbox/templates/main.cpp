@@ -1,7 +1,9 @@
 //
 // Created by aleksei on 1/21/23.
 //
+#ifdef MY_COMPILATION
 #include "main.h"
+#endif
 
 std::istream &operator>>(std::istream &iss, Data &data) {
     return iss;

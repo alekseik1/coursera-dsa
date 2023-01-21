@@ -2,6 +2,8 @@ SET(BASE_NAME template)
 SET(EXE_MAIN_NAME ${BASE_NAME}-main)
 SET(EXE_TEST_NAME ${BASE_NAME}-test)
 
+add_compile_definitions(MY_COMPILATION)
+
 add_executable(${EXE_MAIN_NAME} main.cpp)
 
 add_executable(${EXE_TEST_NAME} tests.cpp main.cpp)
