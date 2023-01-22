@@ -13,8 +13,6 @@ struct Data {
 
 std::istream &operator>>(std::istream &iss, Data &data);
 
-Data ReadInput();
-
 NumType Solve(const Data &);
 
 void PrintAnswer(const NumType);
