@@ -1,0 +1,1 @@
+add_executable(toolbox-w2-hw1-fib-last-digit fibonacci_last_digit.cpp)

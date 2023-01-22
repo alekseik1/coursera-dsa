@@ -1,0 +1,1 @@
+add_executable(toolbox-w2-hw1-last-digit-sum fibonacci_sum_last_digit.cpp)

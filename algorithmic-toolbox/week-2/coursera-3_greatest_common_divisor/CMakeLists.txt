@@ -1,0 +1,1 @@
+add_executable(toolbox-w2-hw1-gcd gcd.cpp)
