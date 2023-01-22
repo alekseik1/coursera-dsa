@@ -22,6 +22,8 @@ void PrintAnswer(const NumType) {
 #ifndef IS_TEST
 
 int main() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(nullptr);
     Data data;
     std::cin >> data;
     PrintAnswer(Solve(data));
