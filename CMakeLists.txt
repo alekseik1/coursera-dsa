@@ -21,6 +21,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Catch2)
 list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
+target_compile_options(Catch2 PRIVATE "-Wno-unused-but-set-variable")
 include(CTest)
 include(Catch)
 
